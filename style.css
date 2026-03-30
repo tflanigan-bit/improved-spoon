@@ -1,0 +1,100 @@
+:root {
+  color-scheme: dark;
+  --bg: #0f1117;
+  --card: #1a1f2e;
+  --muted: #9aa4b2;
+  --accent: #73d0ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(circle at top, #1f2740, var(--bg));
+  color: #f3f8ff;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.panel {
+  background: color-mix(in srgb, var(--card) 94%, white);
+  border: 1px solid #313d57;
+  border-radius: 12px;
+  padding: 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  border-radius: 8px;
+}
+
+input,
+textarea,
+select {
+  background: #101524;
+  border: 1px solid #33415f;
+  color: #eaf0f7;
+  padding: 0.6rem 0.7rem;
+}
+
+button {
+  width: fit-content;
+  background: var(--accent);
+  color: #01111a;
+  border: 0;
+  padding: 0.55rem 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.06);
+}
+
+.hint {
+  color: var(--muted);
+  margin: 0;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.character-card {
+  background: #111a2d;
+  border: 1px solid #2f446b;
+  border-radius: 10px;
+  padding: 0.7rem;
+}
+
+.chat-log {
+  border: 1px solid #314262;
+  border-radius: 10px;
+  min-height: 140px;
+  padding: 0.75rem;
+  background: #0e1422;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.msg {
+  border-left: 3px solid #4f84e8;
+  padding-left: 0.55rem;
+}

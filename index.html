@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Hub</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Character Hub</h1>
+        <p>
+          Build chats with many AI personas. The app expects your Cloudflare Worker to
+          proxy requests securely; API keys must stay server-side.
+        </p>
+      </header>
+
+      <section class="panel">
+        <h2>Worker endpoint</h2>
+        <label for="workerUrl">Cloudflare Worker URL</label>
+        <input
+          id="workerUrl"
+          type="url"
+          placeholder="https://your-worker.example.workers.dev/chat"
+          autocomplete="off"
+        />
+        <button id="saveWorker">Save endpoint</button>
+        <p class="hint" id="workerStatus">No endpoint configured.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Character universe</h2>
+        <label for="characterCount">Character count target</label>
+        <input id="characterCount" type="text" value="939948749947484847784947" />
+        <button id="generateCharacters">Generate preview roster</button>
+        <p class="hint">
+          Massive targets are represented procedurally. This UI renders a 120-character
+          sample so your browser stays responsive.
+        </p>
+
+        <div class="character-grid" id="characterGrid"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Chat</h2>
+        <label for="characterSelect">Select character</label>
+        <select id="characterSelect"></select>
+        <label for="messageInput">Message</label>
+        <textarea id="messageInput" rows="4" placeholder="Say hello..."></textarea>
+        <button id="sendMessage">Send</button>
+        <div class="chat-log" id="chatLog"></div>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
